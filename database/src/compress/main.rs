@@ -6,6 +6,7 @@ use buff::compress::buff_slice::{run_buff_slice_encoding_decoding, run_buff_slic
 
 fn main() {
     log4rs::init_file("config/log4rs.yaml", Default::default()).unwrap();
+    // test commit
 
     let args: Vec<String> = env::args().collect();
     info!("input args{:?}",args);
