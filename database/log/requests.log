@@ -1,0 +1,13 @@
+2024-01-06T17:10:01.048863454+01:00 - input args["target/release/comp_profiler", "./data/randomwalkdatasample1k-1k", "buff-simd", "10000", "1.1509"]
+2024-01-06T17:10:01.081571886+01:00 - original size:4000000
+2024-01-06T17:10:01.081625768+01:00 - compressed size:1437520
+2024-01-06T17:20:27.668614350+01:00 - input args["target/release/comp_profiler", "./data/test", "buff-simd", "10000", "1.1509"]
+2024-01-06T17:20:27.668855907+01:00 - original size:72
+2024-01-06T17:20:27.668865054+01:00 - compressed size:77
+2024-01-10T14:14:12.263993420+01:00 - input args["target/release/comp_profiler", "./data/randomwalkdatasample1k-1k", "buff-simd", "10000", "1.1509"]
+2024-01-10T14:14:12.298327045+01:00 - original size:4000000
+2024-01-10T14:14:12.298356170+01:00 - compressed size:1437520
+2024-01-19T15:09:54.325260314+01:00 - input args["target/release/comp_profiler", "./data/t", "buff-simd", "10000", "1.1509"]
+2024-01-19T15:10:04.073313120+01:00 - input args["target/release/comp_profiler", "./data/t502861995_c0", "buff-simd", "10000", "1.1509"]
+2024-01-19T15:10:04.080097181+01:00 - original size:524288
+2024-01-19T15:10:04.080111248+01:00 - compressed size:442388
