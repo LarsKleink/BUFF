@@ -21,6 +21,7 @@ use std::iter::FromIterator;
 use myroaring::RoaringBitmap;
 use croaring::Bitmap;
 use std::slice::Iter;
+use std::fs;
 
 // pub const SIMD_THRESHOLD:f64 = 0.018;
 pub const SIMD_THRESHOLD:f64 = 0.06;
@@ -229,7 +230,7 @@ pub fn run_buff_encoding_decoding_mybitvec(test_file:&str, scl:usize,pred: f64) 
     //
     // )
 
-    println!("Performance:{},{},{},{},{},{},{},{},{},{}", test_file, scl, pred,
+    println!("Performance LOL: {}, {}, {}, {}, {}, {}, {}, {}, {}, {}", test_file, scl, pred,
              comp_size as f64/ org_size as f64,
              1000000000.0 * org_size as f64 / duration1.as_nanos() as f64 / 1024.0/1024.0,
              1000000000.0 * org_size as f64 / duration2.as_nanos() as f64 / 1024.0/1024.0,
@@ -239,7 +240,16 @@ pub fn run_buff_encoding_decoding_mybitvec(test_file:&str, scl:usize,pred: f64) 
              1000000000.0 * org_size as f64 / duration6.as_nanos() as f64 / 1024.0/1024.0
 
 
-    )
+    );
+
+    println!("original size: {}, compressed size: {}", org_size, comp_size);
+
+    let mut data = String::from("");
+    data.push_str(&*org_size.to_string());
+    data.push_str("\n");
+    data.push_str(&*comp_size.to_string());
+
+    fs::write("/home/lars/prj/Bachelorarbeit/results/buff.csv", data).expect("Unable to write file");
 }
 
 
