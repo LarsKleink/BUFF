@@ -244,10 +244,14 @@ pub fn run_buff_encoding_decoding_mybitvec(test_file:&str, scl:usize,pred: f64) 
 
     println!("original size: {}, compressed size: {}", org_size, comp_size);
 
+    let mut compression_ratio: f64 = comp_size as f64/ org_size as f64;
+
     let mut data = String::from("");
-    data.push_str(&*org_size.to_string());
-    data.push_str("\n");
-    data.push_str(&*comp_size.to_string());
+    data.push_str(&*compression_ratio.to_string());
+    data.push_str(",");
+    data.push_str(&*duration1.as_micros().to_string());
+    data.push_str(",");
+    data.push_str(&*duration2.as_micros().to_string());
 
     fs::write("/home/lars/prj/Bachelorarbeit/results/buff.csv", data).expect("Unable to write file");
 }
